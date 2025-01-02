@@ -1,0 +1,376 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #F4F6F9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Container for the whole page */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Styling */
+header {
+    background-color: #001f3d;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Main Section */
+main {
+    padding: 30px 0;
+}
+
+.welcome h2, .actions h3, .login-prompt p {
+    color: #333;
+    font-size: 1.5rem;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li {
+    padding: 10px 0;
+}
+
+/* Buttons */
+.btn {
+    background-color: #006bb3;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #005187;
+}
+
+/* Dashboard Section */
+.actions {
+    background-color: #e4f1ff;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+.actions a {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+/* Section container */
+section {
+    background-color: #9b97ac; 
+    padding: 20px;
+    border-radius: 15px;
+    margin: 20px auto;
+    max-width: 1200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add some depth */
+  }
+  
+  /* Section heading */
+  section h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #004ba0;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+  
+  /* Button styling */
+  button#open-create-task-modal {
+    display: block;
+    margin: 0 auto 20px;
+    padding: 10px 20px;
+    background: linear-gradient(145deg, #0078d7, #00296b); /* Gradient button */
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  button#open-create-task-modal:hover {
+    background: linear-gradient(145deg, #005bb5, #001f4d);
+    transform: scale(1.05);
+  }
+  
+  /* Table container styling */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #001f3d;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  table thead {
+    background: linear-gradient(145deg, #004ba0, #001f4d); /* Gradient header */
+    color: #ffffff;
+  }
+  
+  table thead th {
+    padding: 15px;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-align: left;
+  }
+  
+  table tbody tr {
+    transition: background-color 0.3s;
+  }
+  
+  table tbody tr:nth-child(odd) {
+    background-color: rgba(0, 120, 215, 0.1); /* Light blue stripes */
+  }
+  
+  table tbody tr:hover {
+    background-color: rgba(0, 120, 215, 0.2); /* Highlight on hover */
+  }
+  
+  table tbody td {
+    padding: 10px 15px;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  /* Responsive layout for smaller screens */
+  @media (max-width: 768px) {
+    table {
+      font-size: 12px;
+    }
+  
+    button#open-create-task-modal {
+      font-size: 14px;
+      padding: 8px 16px;
+    }
+  
+    section h2 {
+      font-size: 20px;
+    }
+  }
+  
+  /*task view*/
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+th, td {
+    padding: 1em;
+    text-align: left;
+    border-bottom: 1px solid #001f3d;
+}
+th {
+    background-color: #001f3d;
+}
+.status-completed {
+    color: #fff;
+    background-color: #28a745;
+    padding: 0.2em 0.5em;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-size: 0.85em;
+}
+.status-in-progress {
+    color: #fff;
+    background-color: #ffc107;
+    padding: 0.2em 0.5em;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-size: 0.85em;
+}
+.status-pending {
+    color: #fff;
+    background-color: #dc3545;
+    padding: 0.2em 0.5em;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-size: 0.85em;
+}
+.btn {
+    color: #007bff;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-decoration: underline;
+}
+.btn:hover {
+    text-decoration: none;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    margin-top: 30px;
+    padding: 10px;
+    background-color: #001f3d;
+    color: white;
+    border-radius: 8px;
+}
+
+/* Task Styles */
+section ul li {
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    margin-top: 10px;
+}
+
+form select {
+    margin-right: 10px;
+    padding: 5px;
+    font-size: 1rem;
+}
+
+form button {
+    background-color: #006bb3;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+}
+
+form button:hover {
+    background-color: #005187;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .btn {
+        padding: 8px 15px;
+    }
+
+    .edit-section form {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "title"
+            "assignedTo"
+            "description"
+            "deadline";
+    }
+}
+
+/*modal design*/
+/* Modal styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7); /* Dark overlay */
+  }
+  
+  .modal-content {
+    background-color: #2d3748; /* Dark gray background */
+    color: #cbd5e0; /* Light gray text color */
+    margin: 10% auto;
+    padding: 30px;
+    border-radius: 12px;
+    width: 40%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    font-family: Arial, sans-serif;
+  }
+  
+  .modal-header h2 {
+    font-size: 24px;
+    margin: 0;
+    text-align: center;
+    border-bottom: 1px solid #4a5568;
+    padding-bottom: 10px;
+    color: #e2e8f0;
+  }
+  
+  .modal-body {
+    margin-top: 20px;
+  }
+  
+  .modal-body label {
+    display: block;
+    margin: 15px 0 5px;
+    color: #a0aec0; /* Soft gray for labels */
+    font-weight: bold;
+  }
+  
+  .modal-body input,
+  .modal-body select,
+  .modal-body textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #4a5568;
+    border-radius: 6px;
+    background-color: #1a202c; /* Dark input background */
+    color: #e2e8f0; /* Light text color */
+    font-size: 14px;
+  }
+  
+  .modal-body input:focus,
+  .modal-body select:focus,
+  .modal-body textarea:focus {
+    outline: none;
+    border-color: #63b3ed; /* Highlighted blue border */
+  }
+  
+  .modal-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .modal-footer button {
+    padding: 10px 20px;
+    background-color: #4a5568; /* Gray button */
+    color: #e2e8f0;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .modal-footer button:hover {
+    background-color: #2d3748; /* Darker gray on hover */
+  }
+  
